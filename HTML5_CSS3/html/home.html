@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/home.css">
+    <title>Transcend | Simform</title>
+</head>
+<body>
+
+    <header class="c-header">
+        <div class="logo">
+            <a href="home.html">
+                <img src="../img/logo.svg" alt="site-logo">
+            </a>
+        </div>
+
+        <nav class="navbar">
+            <span class="open-slide">
+                <!-- <h5>MENU</h5> -->
+                <a href="#" onclick="openSlideMenu()">
+                    MENU 
+                    <svg width="30" height="30">
+                        <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                        <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                        <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+                    </svg>
+                </a>
+            </span>
+        </nav>
+        
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+            <a href="home.html">Home</a>
+            <a href="html5Demo.html">HTML5</a>
+            <a href="css3Demo.html">CSS3</a>
+            <a href="regi.html">Registration From</a>
+        </div>
+
+    </header>
+    
+    <section class="s-home">
+        <div class="home">
+            <h1>
+                Hello folks, we are <br>
+                Transcend Studio.
+            </h1>
+            <p>
+                We create stunning digital experiences <br>
+                that will help your business stand out.
+            </p>
+        </div>
+
+        <ul class="home-sidebar">
+            <b>
+            <li><a href="home.html">Home<span>To home page</span></a></li>
+            <li><a href="html5Demo.html">HTML5<span>Explore new HTML5 tags</span></a></li>
+            <li><a href="css3Demo.html">CSS3<span>Explore new CSS3 tag</span></a></li>
+            <li><a href="regi.html">Registration From<span>From example</span></a></li>
+            </b>
+        </ul>
+
+    </section>
+    
+
+    <footer>
+
+    </footer>
+
+    <script>
+        function openSlideMenu(){
+            document.getElementById('side-menu').style.width = '250px';
+            document.getElementById('main').style.marginLeft = '250px';
+        }
+        
+        function closeSlideMenu(){
+            document.getElementById('side-menu').style.width = '0';
+            document.getElementById('main').style.marginLeft = '0';
+        }
+    </script>
+
+</body>
+</html>
