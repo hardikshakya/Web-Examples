@@ -1,0 +1,121 @@
+p.dashed { 
+    border-style: dashed;
+    margin-top: 50px;
+    padding: 10px 20px 30px 50px;
+    text-shadow: 3px 2px rgb(196, 235, 22);
+    /* outline-color: blueviolet; */
+}
+p.ex1 {
+    border: 1px solid black;
+    outline-style: outset;
+    outline-color: blueviolet;
+    outline-width: thick;
+}
+
+.overflow-scrolll{
+    background-color: #eee;
+    width: 700px;
+    height: 100px;
+    border: 1px dotted black;
+    overflow: scroll;
+}
+
+span.b {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid blue;    
+    /* background-color: yellow;  */
+    background-image: url(../img/ww.jpg);
+}
+div > p {
+    background-color: yellow;
+}
+
+.dropbtn {
+    background-color: rgb(214, 34, 175);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+  
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {background-color: #f1f1f1;}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #f727ec;
+}
+
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+#myD1{
+    width: 300px;
+    height: 100px;
+    background-color: rgb(240, 38, 196);
+    border: 1px solid black;
+  }
+  
+#myD2 {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(214, 69, 25);
+    border: 1px solid black;
+    -webkit-transform: rotate(40deg); 
+    transform: rotate(40deg);
+    
+  }
+  .tt div{
+    width: 100px;
+    height: 100px;
+    background: rgb(10, 191, 236);
+    -webkit-transition: width 2s, height 2s, -webkit-transform 2s; 
+    transition: width 2s, height 2s, transform 2s;
+  }
+  
+  .tt div:hover {
+    width: 300px;
+    height: 300px;
+    -webkit-transform: rotate(180deg); 
+    transform: rotate(180deg);
+  }
