@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Page maker </title>
+</head>
+<body>
+    <div id="main-container">
+        Image Name : <input type="text" id="getname" onfocus="myF(this)">
+        Size of Name : <input type="text" id="getsiz" onfocus="myF(this)">
+        Image url :<input type="text" id="getimg" onfocus="myF(this)">
+        Name of color: <input type="text" id="getCol" onfocus="myF(this)">
+        <button class="" type="button" onclick="getimg()" onfocus="myF(this)"> Click </button> 
+    </div>
+    <h1 id="Nm"></h1>
+    <img src="" id="thisimg">
+</body>
+<script type="text/javascript"> 
+    function getimg(){
+        document.getElementById("main-container").style.display = "none";
+        var name = document.getElementById("getname").value;
+        var fsize = document.getElementById("getsiz").value;
+        var path = document.getElementById("getimg").value;
+        var color = document.getElementById("getCol").value;
+        
+        console.log(path);
+        document.getElementById("Nm").innerHTML = name;
+        document.getElementById("Nm").style.fontSize = fsize;
+        document.getElementById("Nm").style.color = color;
+        document.getElementById("thisimg").src = path;
+    }
+    function myF(x) {
+        x.style.background = "yellow";
+    }
+</script>
+</html>
