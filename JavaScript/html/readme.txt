@@ -1,2 +1,2 @@
-This is source code o page maker website.
+This is source code for page maker website.
 enjoy ;)
