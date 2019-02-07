@@ -10,11 +10,13 @@
 			text-align:center;
 			background-color:rgb(66, 36, 175);
 			padding:10px;
-        }    
+        }   
+
         #b-footer{
 			text-align: center;
 			font-size:18px;
         }
+
         table {
             font-family: arial, sans-serif;
             border-collapse: collapse;
@@ -54,7 +56,7 @@
         <br>  
         EditerName: <input type="text" id="getEditerName1" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
-        video: <input type="text" id="getVideo" onfocusin="myF(this)" onfocusout="myFu(this)">    
+        video: <input type="text" id="getVideo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .mp4 at end of name" style="width: 25%;">    
         <br>
         Fyear: <input type="text" id="getYear" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
@@ -66,25 +68,25 @@
         <br>
         li1: <input type="text" id="getlist1" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
-        li1 Img: <input type="text" id="getImg11" onfocusin="myF(this)" onfocusout="myFu(this)">
+        li1 Img: <input type="text" id="getImg11" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
         <br>
         li2: <input type="text" id="getlist2" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
-        li2 Img: <input type="text" id="getImg12" onfocusin="myF(this)" onfocusout="myFu(this)">
+        li2 Img: <input type="text" id="getImg12" onfocusin="myF(this)" onfocusout="myFu(this)"  placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
         <br>
         li3: <input type="text" id="getlist3" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
-        li3 Img: <input type="text" id="getImg13" onfocusin="myF(this)" onfocusout="myFu(this)">
+        li3 Img: <input type="text" id="getImg13" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
         <br>
         block: <textarea type="text" id="getLogoDetail" onfocusin="myF(this)" onfocusout="myFu(this)"></textarea>
         <br>
-        logo: <input type="text" id="getlogo" onfocusin="myF(this)" onfocusout="myFu(this)">
+        logo: <input type="text" id="getlogo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .png at end of name" style="width: 25%;">
         <br>
         citeName: <input type="text" id="getCiteName" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
         citeOwner: <input type="text" id="getCiteOwner" onfocusin="myF(this)" onfocusout="myFu(this)">
         <br>
-        <button class="" type="button" onclick="getimg()" onfocusin="myF(this)"> Click </button> 
+        <button class="" type="button" onclick="geti()" onfocusin="myF(this)"> Click </button> 
     </div>
 
     <div id="mainP" style="display: none;">
@@ -106,7 +108,6 @@
         <article class="v-post">
             <video width="920" height="540" id="setVideo" controls>
                 <source src="" type="video/mp4">
-                <!-- <source src="./dc.mp4" type="video/mp4"> -->
                 Your browser does not support the video tag.
             </video>
         </article>
@@ -149,17 +150,25 @@
                 </tbody>
             </table>
         </article>
-    </section>
+    </section> 
     <hr>
     <aside>
         <h2>Characters</h2>
         <nav>
             <ul>
-                <li><a href="#" id="setlist1"></a><button class="" type="button" onclick="getimg1()"> View Image </button> <br> <button class="" type="button" onclick="himg1()"> Hide Image </button></li>
+                <li><a href="#" id="setlist1"></a>
+                    <br><button class="" type="button" onclick="getimgy(1)"> View Image </button> 
+                    <br> <button class="" type="button" onclick="himg(1)"> Hide Image </button></li>
                 <img src="" id="setImg11" alt="hsdg" style="display: none;">
-                <li><a href="#" id="setlist2"></a><button class="" type="button" onclick="getimg2()"> View Image </button> <br> <button class="" type="button" onclick="himg2()">Hide Image</button></li>
+
+                <li><a href="#" id="setlist2"></a>
+                    <br><button class="" type="button" onclick="getimgy(2)"> View Image </button> 
+                    <br> <button class="" type="button" onclick="himg(2)">Hide Image</button></li>
                 <img src="" id="setImg12" alt="hsdg" style="display: none;">
-                <li><a href="#" id="setlist3"></a><button class="" type="button" onclick="getimg3()"> View Image </button> <br> <button class="" type="button" onclick="himg3()">Hide Image</button></li>
+
+                <li><a href="#" id="setlist3"></a>
+                    <br><button class="" type="button" onclick="getimgy(3)"> View Image </button> 
+                    <br> <button class="" type="button" onclick="himg(3)">Hide Image</button></li>
                 <img src="" id="setImg13" alt="hsdg" style="display: none;">
             </ul>
         </nav>
