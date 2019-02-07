@@ -36,7 +36,7 @@
             margin-left: 45%;
         }
         .v-post{
-            background-color: black
+            background-color: black;
         }
         .v-post h2{
             margin-left: 45%;
@@ -47,46 +47,122 @@
     </style>
 </head>
 <body>
-    <div id="formq">
-        Page Title: <input type="text" id="getPageTitle" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        Title's Color: <input type="text" id="getTitleCol" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        article: <textarea type="text" id="getArticle" onfocusin="myF(this)" onfocusout="myFu(this)"></textarea> 
-        <br>  
-        EditerName: <input type="text" id="getEditerName1" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        video: <input type="text" id="getVideo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .mp4 at end of name" style="width: 25%;">    
-        <br>
-        Fyear: <input type="text" id="getYear" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        Fname: <input type="text" id="getFilem" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        Fcoll: <input type="text" id="getColl" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        EditerName: <input type="text" id="getEditerName2" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        li1: <input type="text" id="getlist1" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        li1 Img: <input type="text" id="getImg11" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
-        <br>
-        li2: <input type="text" id="getlist2" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        li2 Img: <input type="text" id="getImg12" onfocusin="myF(this)" onfocusout="myFu(this)"  placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
-        <br>
-        li3: <input type="text" id="getlist3" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        li3 Img: <input type="text" id="getImg13" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
-        <br>
-        block: <textarea type="text" id="getLogoDetail" onfocusin="myF(this)" onfocusout="myFu(this)"></textarea>
-        <br>
-        logo: <input type="text" id="getlogo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .png at end of name" style="width: 25%;">
-        <br>
-        citeName: <input type="text" id="getCiteName" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        citeOwner: <input type="text" id="getCiteOwner" onfocusin="myF(this)" onfocusout="myFu(this)">
-        <br>
-        <button class="" type="button" onclick="geti()" onfocusin="myF(this)"> Click </button> 
+    <div id="formq" style="padding-left: 70px; background-color: cornsilk; padding-top: 40px;">
+        <table>
+            <tr>
+                <td>
+                    Page Title:
+                </td>
+                <td>
+                    <input type="text" id="getPageTitle" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Title's Color:
+                </td>
+                <td>
+                    <input type="text" id="getTitleCol" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Article Content:
+                </td>
+                <td>
+                    <textarea type="text" id="getArticle" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"></textarea> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Editer Name:
+                </td>
+                <td>
+                    <input type="text" id="getEditerName1" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    First Character's Name:
+                </td>
+                <td>
+                    <input type="text" id="getlist1" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    First Character's Photo:
+                </td>
+                <td>
+                    <input type="text" id="getImg11" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Second Character's Name:
+                </td>
+                <td>
+                    <input type="text" id="getlist2" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Second Character's Photo:
+                </td>
+                <td>
+                    <input type="text" id="getImg12" onfocusin="myF(this)" onfocusout="myFu(this)"  placeholder="put ./ before the name and .jpg at end of name" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Thired Character's Name:
+                </td>
+                <td>
+                    <input type="text" id="getlist3" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Thired Character's Photo:
+                </td>
+                <td>
+                    <input type="text" id="getImg13" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
+                </td>
+            </tr>            
+            <tr>
+                <td>
+                    Blog on Site's Logo:
+                </td>
+                <td>
+                    <textarea type="text" id="getLogoDetail" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Image of site's Logo:
+                </td>
+                <td>
+                    <input type="text" id="getlogo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .png at end of name" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Site Name:
+                </td>
+                <td>
+                    <input type="text" id="getCiteName" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Site's Owner:
+                </td>
+                <td>
+                    <input type="text" id="getCiteOwner" onfocusin="myF(this)" onfocusout="myFu(this)" style="width: 90%;"> 
+                </td>
+            </tr>
+        </table>       
+        <button class="" type="button" onclick="geti()" onfocusin="myF(this)" style="font-size: 30px; color: blueviolet; background-color: aqua;"> Submit </button>
     </div>
 
     <div id="mainP" style="display: none;">
