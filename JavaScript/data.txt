@@ -28,3 +28,74 @@ In March 2012, DC unveiled a new logo consisting of the letter "D" flipping back
 The Dark Knight Rises was the first film to use the new logo, while the TV series Arrow was the first series to feature the new logo.    
 DC Entertainment announced a new identity and logo for another iconic DC Comics universe brand on May 17, 2016. 
 The new logo was first used on May 25, 2016, in conjunction with the release of DC Universe: Rebirth Special #1 by Geoff Johns.
+
+
+
+
+ <hr>
+        Page Title: <input type="text" id="getPageTitle" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        Title's Color: <input type="text" id="getTitleCol" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        article: <textarea type="text" id="getArticle" onfocusin="myF(this)" onfocusout="myFu(this)"></textarea> 
+        <br>
+        <br>
+        <hr>  
+        EditerName: <input type="text" id="getEditerName1" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        video: <input type="text" id="getVideo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .mp4 at end of name" style="width: 25%;">    
+        <br>
+        <br>
+        <hr>
+        Fyear: <input type="text" id="getYear" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        Fname: <input type="text" id="getFilem" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        Fcoll: <input type="text" id="getColl" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        EditerName: <input type="text" id="getEditerName2" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        li1: <input type="text" id="getlist1" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        li1 Img: <input type="text" id="getImg11" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
+        <br>
+        <br>
+        <hr>
+        li2: <input type="text" id="getlist2" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        li2 Img: <input type="text" id="getImg12" onfocusin="myF(this)" onfocusout="myFu(this)"  placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
+        <br>
+        <br>
+        <hr>
+        li3: <input type="text" id="getlist3" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        li3 Img: <input type="text" id="getImg13" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .jpg at end of name" style="width: 25%;">
+        <br>
+        <br>
+        <hr>
+        block: <textarea type="text" id="getLogoDetail" onfocusin="myF(this)" onfocusout="myFu(this)"></textarea>
+        <br>
+        <br>
+        <hr>
+        logo: <input type="text" id="getlogo" onfocusin="myF(this)" onfocusout="myFu(this)" placeholder="put ./ before the name and .png at end of name" style="width: 25%;">
+        <br>
+        <br>
+        <hr>
+        citeName: <input type="text" id="getCiteName" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
+        citeOwner: <input type="text" id="getCiteOwner" onfocusin="myF(this)" onfocusout="myFu(this)">
+        <br>
+        <br>
+        <hr>
