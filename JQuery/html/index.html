@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<style>
+		body{
+			font-size: 17px;
+			font-family: arial;
+			background: #f4f4f4;
+			line-height: 1.5em;
+		}
+
+		#container{
+			width:90%;
+			margin:auto;
+			padding:10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;" id="tog">
+            AJAX ........
+            <button class="btn btn-outline-success my-2 my-sm-0 ml-5"><a href="index.html">Click Here And Explore AJAX</a></button>
+        </form>
+    </nav>
+	</header>
+	<div id="container">
+           
+
+        <h3>Get Data from other File</h3>
+        <div id="result"></div>
+        <button id="bt1">Click</button><br>
+
+        <h3>Get Users List From JSON File</h3>
+        <ul id="users"></ul>
+        <button id="bt2">Click</button><br>
+
+        <h3>Get POST from WebSite</h3>
+        <div id="result"></div>
+        <button id="bt3">Click</button><br>
+
+		<h3>Add Post</h3>
+		<form id="postForm" action="https://jsonplaceholder.typicode.com/posts">
+		<input type="text" id="title" placeholder="Title"><br>
+		<textarea placeholder="Body" id="body"></textarea><br>
+		<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+            
+			
+			// $('#result').load('test.html', function(responseTxt, statusTxt, xhr){
+			// 	if(statusTxt == "success"){
+			// 		alert('It went fine');
+			// 	} else if(statusTxt == "error"){
+			// 		alert("Error: "+xhr.statusText);
+			// 	}
+			// });
+		
+		    $('#bt1').click(function(){
+                $.get('test.html', function(data){
+				    $('#result').html(data);
+			    });
+            });
+
+            $('#bt2').click(function(){
+                $.getJSON('users.json', function(data){
+				    $.each(data, function(i, user){
+					    $('ul#users').append('<li>'+user.firstName+'</li>');
+				    });
+			    });
+            });
+
+            $('#bt3').click(function(){
+                $.ajax({
+				    method:'GET',
+				    url: 'https://jsonplaceholder.typicode.com/posts',
+				    dataType: 'json'
+			    }).done(function(data){
+				    console.log(data);
+				    $.map(data, function(post, i){
+					    $('#result').append('<h3>'+post.title+'</h3><p>'+post.body+'</p>');
+				    });
+			    });
+            });
+			
+			
+			
+			
+			$('#postForm').submit(function(e){
+				e.preventDefault();
+				var title = $('#title').val();
+				var body = $('#body').val();
+				var url = $(this).attr('action');
+				$.post(url, {title:title, body:body}).done(function(data){
+					console.log('Post Saved');
+                    console.log(data);
+                    // alert('Check it from console');                    
+                });
+                $(".navbar").after("<div class='alert alert-success'>" + title + " has posted " +"' " + body + " '" + "</div>");
+                $(".alert").fadeOut(5000);
+			});
+		});
+	</script>
+</body>
+</html>
