@@ -1,0 +1,99 @@
+<!doctype html>
+<head>
+	<title>Traversing</title>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	<script>
+		$( function() {
+            $( "#bt1" ).click( function() {
+            $( "li" ).has( "ul" ).css( "background-color", "yellow" );
+        });
+        $( "#bt2" ).click( function() {
+            $( "ul" ).find( "li ul" ).css( "background-color", "yellow" );
+        });
+        $( "#bt3" ).click( function() {
+            $( "li" ).eq( 4 ).css( "background-color", "yellow" );
+        });
+        $( "#bt4" ).click( function() {
+            $( "li" ).filter( ":odd" ).fadeOut( "slow" );
+        });
+        $( "#bt5" ).click( function() {
+            $("#bt4").parent().css({"color": "red", "border": "2px solid red"});
+        });
+    
+        $( "#bt6" ).click( function() {
+            $("#d0").children().css({"color": "red", "border": "2px solid red"});
+        });
+    
+    });
+	</script>
+</head>
+<body>
+	<header>
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;" id="tog">
+            <h2>Traversing ........</h2>
+            <button class="btn btn-outline-success my-2 my-sm-0 ml-5"><a href="index.html">Home</a></button>
+            <button class="btn btn-outline-success my-2 my-sm-0 ml-5"><a href="ajax.html">Click Here And Explore AJAX</a></button>
+        </form>
+    </nav>
+	</header>
+	<div id="md">
+        <div id="d1">
+            <button id="bt1">Highlight all list items that have nested lists</button>
+            <button id="bt2">Highlight all nested lists</button>
+            <button id="bt3">Highlight the 5th list item</button>
+            <button id="bt4">Fade out the odd list items</button>
+            <button id="bt5">Highlight buttons list</button>
+            <button id="bt6">Highlight child of 'try traversing' division</button>
+    
+        </div>
+    
+        <h1>Try Traversing</h1>
+    
+        <div id="d0">
+            <p>
+                Hardikkkkkkkkkkk 
+                <br>
+                <span> hhhhhhhh </span>
+                <br>
+                opopoafahigigigi
+            </p>
+    
+            <p>
+                kidrahhhhhhhhhhh
+                <br>
+                <span> bbbbbbbbbb </span>
+                <br>
+                higohoihiwheopjigigi
+            </p>
+        </div>
+    
+        <div id="d2"> Div 2
+            <ul> Main UL
+                <li>Apples
+                    <ul> Apples's UL
+                        <li id="li11">Big ones</li>
+                        <li>Juicy ones</li>
+                        <li>Red ones</li>
+                    </ul>
+                </li>
+                <li>Oranges</li>
+                <li>Papaya
+                    <ul> Papaya's UL
+                        <li>Papaya carica</li>
+                        <li>Carica</li>
+                        <li>Carica pubescens</li>
+                    </ul>
+                </li>
+                <li>Lychee</li>
+                <li>Rambutan</li>
+                <li>Passionfruit</li>
+                <li>Mango</li>
+            </ul>
+        </div>
+    
+    </div>
+</body>
+</html>

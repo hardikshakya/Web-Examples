@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="../js/search.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;" id="tog">
+        <form class="form-inline" style="padding-left: 500px;" method="POST">
+	        <input class="form-control mr-sm-2" type="search" placeholder="Search City" aria-label="Search" id="sCity">
+	        <input class="form-control mr-sm-2" type="search" placeholder="Search State" aria-label="Search" id="sState">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="myFunction(); return false;">Search</button>
+			<button class="btn btn-outline-success my-2 my-sm-0 ml-5"><a href="ajax.html">Click Here And Explore AJAX</a></button>
+			<button class="btn btn-outline-success my-2 my-sm-0 ml-5"><a href="trav1.html">Click Here And Explore Traversing</a></button>
+        </form>
+    </nav>
+
+    <div class="container mt-4">
+    <button id="b2">Slide Up/Down Navbar</button><br><br>
+    
+    <button id="b1">Click for fade in/out List</button><br><br>
+	<h3>Billbords</h3>
+	<table class='table' id="myTable">
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Address</th>
+			<th>City</th>
+			<th>State</th>
+            <th></th>
+            <th></th>
+		</tr>
+
+
+		<tr data-id="<%= banner.id %>" data-model="banner" id="n1">
+			<td>1</td>
+			<td>Gully boy</td>
+			<td>Devarc mall, Ahmedabad, Gujarat, India</td>
+			<td>Ahmedabad</td>
+			<td>Gujarat</td>
+            <td><a href="#" class="btn btn-sm btn-danger" id="hide">Hide</a></td>
+        </tr>
+        <tr data-id="<%= banner.id %>" data-model="banner" id="n2">
+			<td>2</td>
+			<td>Still Got Time</td>
+			<td>Chaitanya Township-3, Jitodia, Anand, Gujarat</td>
+			<td>Anand</td>
+			<td>Gujarat</td>
+            <td><a href="#" class="btn btn-sm btn-primary" id="b3">Animation</a></td>
+        </tr> 
+        <tr data-id="<%= banner.id %>" data-model="banner" id="n3">
+			<td>3</td>
+			<td>Kam Bhari</td>
+			<td>G H Patel College of Engineering & Technology, Bakrol Rd, Anand, Gujarat</td>
+			<td>Anand</td>
+			<td>Gujarat</td>
+			<td><a href="#" class="btn btn-sm btn-primary">Show</a></td>
+        </tr>
+        <tr data-id="<%= banner.id %>" data-model="banner" id="n4">
+			<td>4</td>
+			<td>Bad Blood</td>
+			<td>Kalavad Road Virda Vajadi, Rajkot, Gujarat</td>
+			<td>Rajkot</td>
+			<td>Gujarat</td>
+			<td><a href="#" class="btn btn-sm btn-primary">Show</a></td>
+        </tr>
+        <tr data-id="<%= banner.id %>" data-model="banner" id="n5">
+			<td>5</td>
+			<td>IIM A</td>
+			<td>Kalabhavan, Rajmahal Road, Vadodara, Gujarat</td>
+			<td>Vadodara</td>
+			<td>Gujarat</td>
+			<td><a href="#" class="btn btn-sm btn-primary">Show</a></td>
+        </tr>
+        <tr data-id="<%= banner.id %>" data-model="banner" id="n6">
+			<td>6</td>
+			<td>DELL</td>
+			<td>Apollo Bandar, Colaba, Mumbai, Maharashtra</td>
+			<td>Mumbai</td>
+			<td>Maharashtra</td>
+			<td><a href="#" class="btn btn-sm btn-primary" id="b6">Chain Animation</a></td>
+		</tr>
+	</table>
+    </div>
+    
+</body>
+</html>
