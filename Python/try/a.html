@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="ajaxjs.js"></script>
+
+  </head>
+  <body>
+    <button onclick="runPyScript()"> sss</button>
+    <button id="bt3">Click</button><br>
+    <div id="top_x_div" style="width: 900px; height: 400px;"></div>
+    <script>
+        $(document).ready(function(){        
+  
+          $('#bt3').click(function(){
+            $.getScript("try2.js");
+            // $.ajax({
+            //   method:'GET',
+            //   url: 'https://jsonplaceholder.typicode.com/posts',
+            //   dataType: 'json'
+            // }).done(function(data){
+            //   console.log(data);
+            // });
+          });
+      });
+    </script>
+  </body>
+</html>
