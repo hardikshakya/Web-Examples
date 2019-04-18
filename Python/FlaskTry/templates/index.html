@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        This will send data using AJAX to Python:<br /><br />
+        <a href="" id="theButton">Click Me</a>
+        <br>
+        <a href="" id="theBut">Click Me Again</a>
+        <br>
+        <a href="" id="theBut1">Click Me Returns</a>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    var cars = [
+        { "make":"Porsche", "model":"911S" },
+        { "make":"Mercedes-Benz", "model":"220SE" },
+        { "make":"Jaguar","model": "Mark VII" }
+    ];
+    var values = [
+        {"name": "Hardik"}
+    ]
+
+    window.onload = function() {
+        document.getElementById("theButton").onclick = function() {
+            doWork()
+        };
+        document.getElementById("theBut").onclick = function() {
+            doWorkBut()
+        };
+        document.getElementById("theBut1").onclick = function() {
+            doWorkBut1()
+        };
+    }
+
+    function doWorkBut1() {
+        $.ajax({
+            url : "/train",
+            type : "POST",
+            data : JSON.stringify("Anand"),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+
+        });
+        event.preventDefault();
+    }
+    // function doWorkBut2() {
+    //     $.ajax({
+    //         url : "/train",
+    //         type : "GET",
+    //         success: function (response) {
+    //             console.log(response);
+    //         },
+    //         error: function (error) {
+    //             console.log(error);
+    //         }
+    //     });
+    //     event.preventDefault();
+    // }
+
+    function doWork() {
+        $.ajax({
+            url : "/receiver",
+            type : "POST",
+            data : JSON.stringify(cars),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+
+        });
+        // .done(function(data){
+        //     console.log("After " +data["word"]);
+        // });
+        event.preventDefault();
+    }
+    function doWorkBut() {
+        $.ajax({
+            url : "/sender",
+            type : "GET",
+            success: function (response) {
+                console.log(response);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+        event.preventDefault();
+    }
+    </script>
+</body>
+</html>
