@@ -4,7 +4,7 @@ import pandas as pd
 
 def bill_data(name):
     traffic_df = pd.read_csv('/Users/hardik.shakya/Desktop/Web-Examples/Data/trafficdata.csv', delimiter = ';')
-
+    array = []
     for i in range(24) :
 
         t = traffic_df[traffic_df.City == name]
@@ -23,5 +23,5 @@ def bill_data(name):
         av_amv_num = av_df1['AMV'].mean()
 
         av_veh_sum = (av_car_num + av_bus_num + av_lgv_num + av_h2_num + av_h3_num + av_h4_num + av_v3_num + av_v5_num + av_v6_num + av_hgv_num + av_amv_num)//11
-
-        print(av_veh_sum)
+        array.append(av_veh_sum) 
+    return json.dumps(array) 

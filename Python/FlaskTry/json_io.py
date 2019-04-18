@@ -29,13 +29,13 @@ def workerr():
     ]
 	return json.dumps(data)
 
-@app.route('/train', methods = ['POST'])
+@app.route('/train', methods = ['POST', 'GET'])
 def workerrr():
 	data = request.get_json()
 	print(str(data))
-	bill_data(str(data))
-
-	return str(data)
+	some = bill_data(str(data))
+	print("Some :", some)
+	return some
 
 if __name__ == '__main__':
 	app.run()
